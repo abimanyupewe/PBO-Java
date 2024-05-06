@@ -25,9 +25,6 @@ public class Latihan7 {
         int jumlahPengulangan = 1 + mesinRandom.nextInt(20); // Mengubah batas atas menjadi 20
         if (jumlahPengulangan >= 10) {
             System.out.print("Pesan akan diulang: " + jumlahPengulangan + " kali\n");
-        } else (jumlahPengulangan = 5){
-            System.out.print("Pesan akan diulang: " + jumlahPengulangan + " kali\n");
-        } // Jika random >= 10, jumlah perulangan menjadi 5)
             
 
         for (int n = 0; n < jumlahPengulangan; n++) {
