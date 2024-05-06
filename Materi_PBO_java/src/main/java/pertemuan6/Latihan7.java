@@ -12,24 +12,34 @@ import java.util.Scanner;
  *
  * @author A-11
  */
-public class Latihan7 {
+import java.util.Scanner;
+import java.util.Random;
 
+public class Latihan7 {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
+
         System.out.println("Tuliskan pesan di sini, saya akan tampilkan berulang.");
-        System.out.print("Pesan: ");
+        System.out.print("Tuliskan Pesan anda paduka : ");
         String message = keyboard.nextLine();
 
-        //dua baris berikut untuk membuat bilangan random bertipe integer
+        // Menggunakan kelas Random untuk menghasilkan bilangan acak
         Random mesinRandom = new Random();
-        int jumlahPengulangan = 1 + mesinRandom.nextInt(20); // Mengubah batas atas menjadi 20
-        if (jumlahPengulangan >= 10) {
-            System.out.print("Pesan akan diulang: " + jumlahPengulangan + " kali\n");
-            
+        int jumlahPengulangan = mesinRandom.nextInt(20) + 1; // Menghasilkan bilangan dari 1 sampai 20
+        
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("\nJumlah pengulangan yang didapatkan = " + jumlahPengulangan);
 
-        for (int n = 0; n < jumlahPengulangan; n++) {
-            System.out.println((n + 1) + ". " + message);
+        if (jumlahPengulangan >= 10) { // jika sama dengan lebih dari 10
+            System.out.println("\n\tBilangan random yang didapat terlalu besar, pesan akan diulang 5 kali.");
+            jumlahPengulangan = 5; // maka akan di cetak sebanyak 5 kali
         }
-    }
+
+        System.out.println("\nPesan diulang sebnyak : " + jumlahPengulangan + " kali\n");
+        System.out.println("-----------------------------------------------------------------------------");
+
+        for (int n = 0; n < jumlahPengulangan; n++) { // di mulai dari index ke 0
+            System.out.println(n + ". " + message);
+        }
     }
 }
