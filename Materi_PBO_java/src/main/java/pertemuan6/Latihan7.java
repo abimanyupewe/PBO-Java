@@ -31,4 +31,5 @@ public class Latihan7 {
             System.out.println((n + 1) + ". " + message);
         }
     }
+    }
 }
