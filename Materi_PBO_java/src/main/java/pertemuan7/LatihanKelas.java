@@ -11,7 +11,7 @@ import LatihanClass.Person;
  *
  * @author A-11
  */
-public class LatihanKelas {
+public class LatihanKelas { // TokoBuku
 
     public static void main(String[] args) {
         Buku buku1 = new Buku();
